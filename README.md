@@ -119,6 +119,14 @@ The unit test suite can be run with:
 $ yarn test
 ```
 
+### Bundling
+
+The library bundles can be generated with:
+
+```bash
+$ yarn bundle
+```
+
 ### Publishing
 
 The package can be published at:
