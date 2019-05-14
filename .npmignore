@@ -1,1 +1,5 @@
 src
+node_modules
+coverage
+.rts2*/
+yarn-error.log
