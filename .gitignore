@@ -1,0 +1,9 @@
+# Node
+node_modules
+yarn-error.log
+
+# Jest
+coverage
+
+# macOS
+.DS_Store

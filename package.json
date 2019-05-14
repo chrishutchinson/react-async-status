@@ -1,0 +1,40 @@
+{
+  "name": "react-loading-status",
+  "version": "1.0.0",
+  "description": "React hook for managing loading states and errors",
+  "main": "src/index.tsx",
+  "repository": "https://github.com/chrishutchinson/react-loading-status",
+  "author": "Chris Hutchinson <chris_hutchinson@me.com>",
+  "license": "MIT",
+  "scripts": {
+    "test": "jest --coverage"
+  },
+  "dependencies": {
+    "react": "^16.8.6"
+  },
+  "devDependencies": {
+    "@types/jest": "^24.0.13",
+    "@types/node": "^12.0.1",
+    "@types/react": "^16.8.17",
+    "jest": "^24.8.0",
+    "react-hooks-testing-library": "^0.5.0",
+    "react-test-renderer": "^16.8.6",
+    "react-testing-library": "^7.0.0",
+    "ts-jest": "^24.0.2",
+    "typescript": "^3.4.5"
+  },
+  "jest": {
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js"
+    ],
+    "preset": "ts-jest",
+    "transform": {
+      "^.+\\.(t|j)sx?$": "ts-jest"
+    },
+    "testMatch": [
+      "<rootDir>/**/__tests__/**/*.ts"
+    ]
+  }
+}
