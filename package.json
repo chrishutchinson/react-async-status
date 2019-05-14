@@ -1,13 +1,17 @@
 {
-  "name": "react-loading-status",
+  "name": "react-async-status",
   "version": "1.0.0",
-  "description": "React hook for managing loading states and errors",
-  "main": "src/index.tsx",
-  "repository": "https://github.com/chrishutchinson/react-loading-status",
+  "description": "A simple React hook for managing the status of an async action and an associated message",
+  "main": "dist/index.js",
+  "umd:main": "dist/index.umd.js",
+  "module": "dist/index.m.js",
+  "source": "src/index.ts",
+  "repository": "https://github.com/chrishutchinson/react-async-status",
   "author": "Chris Hutchinson <chris_hutchinson@me.com>",
   "license": "MIT",
   "scripts": {
-    "test": "jest --coverage"
+    "test": "jest --coverage",
+    "bundle": "microbundle"
   },
   "dependencies": {
     "react": "^16.8.6"
@@ -17,6 +21,7 @@
     "@types/node": "^12.0.1",
     "@types/react": "^16.8.17",
     "jest": "^24.8.0",
+    "microbundle": "^0.11.0",
     "react-hooks-testing-library": "^0.5.0",
     "react-test-renderer": "^16.8.6",
     "react-testing-library": "^7.0.0",

@@ -1,27 +1,44 @@
-# `useLoadingStatus()` React Hook
+# `useAsyncStatus()` React Hook
 
-> A simple React hook for managing a loading status and associated message
+> A simple React hook for managing the status of an async action and an
+> associated message
 
 ## Installation
 
 ```bash
-$ yarn add react-loading-status
+$ yarn add react-async-status
 ```
 
-## Usage examples
+## Usage
+
+`status` can be one of:
+
+- `"none"` – async action not yet initialised
+- `"pending"` – async action initialised but not complete
+- `"success"` – async action completed successfully
+- `"error"` – async action failed
+
+`message` is an optional string
+
+`setStatus` is a method that takes one of the above statuses, and (optionally) a
+message string.
+
+```ts
+const [status, message, setStatus] = useAsyncStatus();
+```
 
 ### Simple example
 
 ```tsx
-import useLoadingStatus from "react-loading-status";
+import useAsyncStatus from "react-async-status";
 
 const SomeComponent: React.FunctionComponent = () => {
-  const [loadingStatus, loadingMessage, setLoadingStatus] = useLoadingStatus();
+  const [loadingStatus, loadingMessage, setLoadingStatus] = useAsyncStatus();
 
   useEffect(() => {
     setLoadingStatus("pending");
 
-    someAsyncFunction()
+    someAsyncLoadingFunction()
       .then(() => {
         setLoadingStatus("success");
 
@@ -53,10 +70,10 @@ export default SomeComponent;
 ### Alternative example (custom naming)
 
 ```tsx
-import useLoadingStatus from "react-loading-status";
+import useAsyncStatus from "react-async-status";
 
 const SomeComponent: React.FunctionComponent = () => {
-  const [savingStatus, savingMessage, setSavingStatus] = useLoadingStatus();
+  const [savingStatus, savingMessage, setSavingStatus] = useAsyncStatus();
 
   const handleSave = async () => {
     setSavingStatus("pending");

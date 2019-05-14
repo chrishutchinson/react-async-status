@@ -2,7 +2,7 @@ import * as React from "react";
 
 export type Status = "none" | "pending" | "success" | "error";
 
-const useLoadingStatus: (
+const useAsyncStatus: (
   defaultStatus?: Status
 ) => [Status, string, (status: Status, message?: string) => void] = (
   defaultStatus = "none"
@@ -18,4 +18,4 @@ const useLoadingStatus: (
   return [status, message, handleSetStatus];
 };
 
-export default useLoadingStatus;
+export default useAsyncStatus;

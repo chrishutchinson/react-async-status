@@ -1,9 +1,9 @@
 import { renderHook, act } from "react-hooks-testing-library";
-import useLoadingStatus from "../index";
+import useAsyncStatus from "../index";
 
-describe("#useLoadingStatus()", () => {
+describe("#useAsyncStatus()", () => {
   it("should return the default status and message", () => {
-    const { result } = renderHook(() => useLoadingStatus());
+    const { result } = renderHook(() => useAsyncStatus());
 
     const [status, message] = result.current;
 
@@ -12,7 +12,7 @@ describe("#useLoadingStatus()", () => {
   });
 
   it("should return a handler to set the status", () => {
-    const { result } = renderHook(() => useLoadingStatus());
+    const { result } = renderHook(() => useAsyncStatus());
 
     const [, , setStatus] = result.current;
 
@@ -25,7 +25,7 @@ describe("#useLoadingStatus()", () => {
   });
 
   it("should return a handler to set the status and the message together", () => {
-    const { result } = renderHook(() => useLoadingStatus());
+    const { result } = renderHook(() => useAsyncStatus());
 
     const [, , setStatus] = result.current;
 
@@ -38,7 +38,7 @@ describe("#useLoadingStatus()", () => {
   });
 
   it("should reset the message when the status changes and a message is not passed", () => {
-    const { result } = renderHook(() => useLoadingStatus());
+    const { result } = renderHook(() => useAsyncStatus());
 
     const [, , setStatus] = result.current;
 
