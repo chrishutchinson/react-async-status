@@ -12,7 +12,7 @@
   "license": "MIT",
   "scripts": {
     "test": "jest --coverage",
-    "test:ci": "JEST_JUNIT_OUTPUT=test-results/jest/results.xml jest --ci --runInBand --reporters=default --reporters=jest-junit",
+    "test:ci": "JEST_JUNIT_OUTPUT=test-results/jest/results.xml jest --ci --runInBand --reporters=default --reporters=jest-junit --coverage",
     "bundle": "microbundle",
     "publish": "npm publish . --access=public"
   },
