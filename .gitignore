@@ -4,6 +4,8 @@ yarn-error.log
 
 # Jest
 coverage
+test-results
+junit.xml
 
 # macOS
 .DS_Store
