@@ -3,6 +3,8 @@
 > A simple React hook for managing the status of an async action and an
 > associated message
 
+[![CircleCI](https://circleci.com/gh/chrishutchinson/react-async-status.svg?style=svg)](https://circleci.com/gh/chrishutchinson/react-async-status)
+
 ## Installation
 
 ```bash
