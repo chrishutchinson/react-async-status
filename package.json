@@ -44,6 +44,10 @@
     },
     "testMatch": [
       "<rootDir>/**/__tests__/**/*.ts"
+    ],
+    "reporters": [
+      "default",
+      "jest-junit"
     ]
   }
 }
